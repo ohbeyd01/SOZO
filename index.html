@@ -44,52 +44,51 @@
       text-decoration: underline;
     }
 
-    /* Main Section */
-    .main-container {
+    /* Rotating Circle Section */
+    .rotating-circle-container {
+      position: relative;
+      width: 200px;
+      height: 200px;
+      margin: 30px auto;
+      animation: rotate 10s linear infinite;
+    }
+
+    .rotating-circle-container div {
+      position: absolute;
+      width: 70px;
+      height: 70px;
+      background-color: #00bcd4;
+      border-radius: 50%;
       display: flex;
       align-items: center;
-      justify-content: space-between;
-      padding: 40px;
-      flex-wrap: wrap;
-    }
-
-    .rotating-ring {
-      width: 150px;
-      height: 150px;
-      border-radius: 50%;
-      border: 5px solid transparent;
-      border-top: 5px solid #00bcd4;
-      border-left: 5px solid #00bcd4;
-      animation: rotate 5s linear infinite;
-      position: relative;
-      margin: 20px auto;
-    }
-
-    .rotating-ring span {
-      position: absolute;
-      width: 100%;
-      text-align: center;
-      color: #00bcd4;
-      font-size: 14px;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
+      justify-content: center;
+      color: #000;
+      font-size: 0.9rem;
       font-weight: bold;
+      text-align: center;
+      cursor: pointer;
     }
+
+    .rotating-circle-container div:hover {
+      background-color: #007c9a;
+      color: #fff;
+    }
+
+    /* Positioning Service Buttons */
+    .service1 { top: 0; left: 50%; transform: translateX(-50%); }
+    .service2 { top: 50%; left: 100%; transform: translateY(-50%) translateX(-100%); }
+    .service3 { bottom: 0; left: 50%; transform: translateX(-50%); }
+    .service4 { top: 50%; left: 0; transform: translateY(-50%); }
 
     @keyframes rotate {
-      0% {
-        transform: rotate(0deg);
-      }
-      100% {
-        transform: rotate(360deg);
-      }
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
     }
 
+    /* Hero Section */
     .hero {
-      flex: 1;
-      text-align: left;
-      padding: 50px;
+      text-align: center;
+      padding: 40px 20px;
     }
 
     .hero h1 {
@@ -101,7 +100,7 @@
     .hero p {
       font-size: 1.2rem;
       line-height: 1.6;
-      margin-bottom: 15px;
+      margin-bottom: 20px;
     }
 
     .cta {
@@ -125,7 +124,6 @@
       padding: 20px;
       background-color: #1a1a1a;
       color: #00bcd4;
-      margin-top: 40px;
     }
 
     .footer p {
@@ -157,23 +155,26 @@
     </nav>
   </header>
 
-  <!-- Main Section -->
-  <div class="main-container">
-    <div class="rotating-ring">
-      <span>House Cleaning</span>
-    </div>
-    <section class="hero">
-      <h1>Welcome to SOZO Cleaning Services</h1>
-      <p>From the inside out, we make cleanliness our priority. Offering house cleaning, carpet cleaning, sofa set cleaning, and much more!</p>
-      <p>Experience professionalism, affordability, and unbeatable quality in every service we deliver.</p>
-      <a href="services.html" class="cta">Explore Our Services</a>
-    </section>
+  <!-- Rotating Circle Section -->
+  <div class="rotating-circle-container">
+    <div class="service1" onclick="location.href='services.html#house-cleaning'">House Cleaning</div>
+    <div class="service2" onclick="location.href='services.html#carpet-cleaning'">Carpet Cleaning</div>
+    <div class="service3" onclick="location.href='services.html#sofa-cleaning'">Sofa Cleaning</div>
+    <div class="service4" onclick="location.href='services.html#upholstery-cleaning'">Upholstery Cleaning</div>
   </div>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>Welcome to SOZO Cleaning Services</h1>
+    <p>From the inside out, we make cleanliness our priority. Offering house cleaning, carpet cleaning, sofa set cleaning, and much more!</p>
+    <p>Experience professionalism, affordability, and unbeatable quality in every service we deliver.</p>
+    <a href="services.html" class="cta">Explore Our Services</a>
+  </section>
 
   <!-- Footer Section -->
   <footer class="footer">
     <p>© 2025 <a href="index.html">SOZO Cleaning Services</a>. All rights reserved.</p>
   </footer>
 </body>
-  </html>
+      </html>
   
