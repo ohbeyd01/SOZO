@@ -51,6 +51,10 @@
       height: 200px;
       margin: 30px auto;
       animation: rotate 10s linear infinite;
+      background-image: url('men-working-background.jpg'); /* Add the image behind the circles */
+      background-size: cover;
+      background-position: center;
+      border-radius: 50%;
     }
 
     .rotating-circle-container div {
@@ -103,8 +107,48 @@
       margin-bottom: 20px;
     }
 
-    .cta {
+    /* Services Description */
+    .services-description {
+      text-align: center;
+      padding: 40px 20px;
+      background-color: #333;
+    }
+
+    .services-description h2 {
+      font-size: 2rem;
+      color: #00bcd4;
+      margin-bottom: 20px;
+    }
+
+    .services-description .service-item {
       display: inline-block;
+      width: 22%;
+      margin: 10px;
+      text-align: center;
+      background-color: #444;
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+    .services-description img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
+
+    .services-description .service-item h3 {
+      color: #fff;
+      font-size: 1.5rem;
+      margin: 10px 0;
+    }
+
+    .services-description .service-item p {
+      color: #bbb;
+      font-size: 1rem;
+      margin-bottom: 15px;
+    }
+
+    .services-description .service-item .cta {
       padding: 10px 20px;
       background-color: #00bcd4;
       color: #000;
@@ -113,7 +157,7 @@
       font-weight: bold;
     }
 
-    .cta:hover {
+    .services-description .service-item .cta:hover {
       background-color: #007c9a;
       color: #fff;
     }
@@ -163,6 +207,35 @@
     <div class="service4" onclick="location.href='services.html#upholstery-cleaning'">Upholstery Cleaning</div>
   </div>
 
+  <!-- Services Description Section -->
+  <section class="services-description">
+    <h2>Our Services</h2>
+    <div class="service-item">
+      <img src="house-cleaning.jpg" alt="House Cleaning">
+      <h3>House Cleaning</h3>
+      <p>Professional cleaning services for your home. We take care of all the details!</p>
+      <a href="services.html#house-cleaning" class="cta">Learn More</a>
+    </div>
+    <div class="service-item">
+      <img src="carpet-cleaning.jpg" alt="Carpet Cleaning">
+      <h3>Carpet Cleaning</h3>
+      <p>Effective carpet cleaning to remove dirt and stains, leaving your carpets fresh!</p>
+      <a href="services.html#carpet-cleaning" class="cta">Learn More</a>
+    </div>
+    <div class="service-item">
+      <img src="sofa-cleaning.jpg" alt="Sofa Cleaning">
+      <h3>Sofa Cleaning</h3>
+      <p>We restore your sofas to their original beauty with professional cleaning.</p>
+      <a href="services.html#sofa-cleaning" class="cta">Learn More</a>
+    </div>
+    <div class="service-item">
+      <img src="upholstery-cleaning.jpg" alt="Upholstery Cleaning">
+      <h3>Upholstery Cleaning</h3>
+      <p>Thorough upholstery cleaning to keep your furniture looking great.</p>
+      <a href="services.html#upholstery-cleaning" class="cta">Learn More</a>
+    </div>
+  </section>
+
   <!-- Hero Section -->
   <section class="hero">
     <h1>Welcome to SOZO Cleaning Services</h1>
@@ -176,5 +249,4 @@
     <p>© 2025 <a href="index.html">SOZO Cleaning Services</a>. All rights reserved.</p>
   </footer>
 </body>
-      </html>
-  
+</html>
