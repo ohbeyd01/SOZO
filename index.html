@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>SOZO Cleaning Services</title>
-  <!-- Add FontAwesome CDN for icons -->
+  <!-- FontAwesome CDN for icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <style>
     body {
@@ -49,42 +49,45 @@
     /* Rotating Circle Section */
     .rotating-circle-container {
       position: relative;
-      width: 200px;
-      height: 200px;
+      width: 250px;
+      height: 250px;
       margin: 30px auto;
-      animation: rotate 10s linear infinite;
+      animation: rotate 20s linear infinite;
       background-image: url('men-working-background.jpg'); /* Add the image behind the circles */
       background-size: cover;
       background-position: center;
       border-radius: 50%;
+      box-shadow: 0 0 20px rgba(0, 188, 212, 0.5);
     }
 
     .rotating-circle-container div {
       position: absolute;
-      width: 70px;
-      height: 70px;
-      background-color: #00bcd4;
+      width: 90px;
+      height: 90px;
+      background-color: rgba(0, 188, 212, 0.9);
       border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
       color: #000;
-      font-size: 0.9rem;
+      font-size: 1rem;
       font-weight: bold;
       text-align: center;
       cursor: pointer;
+      transition: transform 0.3s, background-color 0.3s;
     }
 
     .rotating-circle-container div:hover {
-      background-color: #007c9a;
+      background-color: rgba(0, 124, 154, 0.9);
       color: #fff;
+      transform: scale(1.1);
     }
 
     /* Positioning Service Buttons */
-    .service1 { top: 0; left: 50%; transform: translateX(-50%); }
-    .service2 { top: 50%; left: 100%; transform: translateY(-50%) translateX(-100%); }
-    .service3 { bottom: 0; left: 50%; transform: translateX(-50%); }
-    .service4 { top: 50%; left: 0; transform: translateY(-50%); }
+    .service1 { top: 10%; left: 50%; transform: translate(-50%, -50%); }
+    .service2 { top: 50%; left: 90%; transform: translate(-50%, -50%); }
+    .service3 { top: 90%; left: 50%; transform: translate(-50%, -50%); }
+    .service4 { top: 50%; left: 10%; transform: translate(-50%, -50%); }
 
     @keyframes rotate {
       0% { transform: rotate(0deg); }
@@ -95,21 +98,48 @@
     .hero {
       text-align: center;
       padding: 40px 20px;
+      background-image: url('hero-background.jpg'); /* Optional: Add a hero background image */
+      background-size: cover;
+      background-position: center;
+      background-color: rgba(0, 0, 0, 0.7);
+      background-blend-mode: overlay;
     }
 
     .hero h1 {
       color: #00bcd4;
       font-size: 3rem;
       margin-bottom: 20px;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
     }
 
     .hero p {
       font-size: 1.2rem;
       line-height: 1.6;
       margin-bottom: 20px;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
     }
 
-    /* Services Description */
+    .cta {
+      display: inline-block;
+      padding: 12px 25px;
+      background-color: #00bcd4;
+      color: #000;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+      transition: background-color 0.3s, color 0.3s;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+    }
+
+    .cta:hover {
+      background-color: #007c9a;
+      color: #fff;
+      box-shadow: 0 6px 8px rgba(0,0,0,0.5);
+    }
+
+    /* Services Description Section */
     .services-description {
       text-align: center;
       padding: 40px 20px;
@@ -119,10 +149,10 @@
     .services-description h2 {
       font-size: 2rem;
       color: #00bcd4;
-      margin-bottom: 20px;
+      margin-bottom: 30px;
     }
 
-    .services-description .service-item {
+    .service-item {
       display: inline-block;
       width: 22%;
       margin: 10px;
@@ -130,36 +160,44 @@
       background-color: #444;
       padding: 20px;
       border-radius: 10px;
+      transition: transform 0.3s, background-color 0.3s;
     }
 
-    .services-description img {
+    .service-item:hover {
+      transform: translateY(-10px);
+      background-color: #555;
+    }
+
+    .service-item img {
       width: 100%;
       height: auto;
       border-radius: 10px;
+      margin-bottom: 15px;
     }
 
-    .services-description .service-item h3 {
+    .service-item h3 {
       color: #fff;
       font-size: 1.5rem;
       margin: 10px 0;
     }
 
-    .services-description .service-item p {
+    .service-item p {
       color: #bbb;
       font-size: 1rem;
       margin-bottom: 15px;
     }
 
-    .services-description .service-item .cta {
-      padding: 10px 20px;
+    .service-item .cta {
+      padding: 8px 16px;
       background-color: #00bcd4;
       color: #000;
       text-decoration: none;
       border-radius: 5px;
       font-weight: bold;
+      transition: background-color 0.3s, color 0.3s;
     }
 
-    .services-description .service-item .cta:hover {
+    .service-item .cta:hover {
       background-color: #007c9a;
       color: #fff;
     }
@@ -201,6 +239,39 @@
 
     .social-media a:hover {
       color: #007c9a;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 1200px) {
+      .service-item {
+        width: 45%;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .navbar a {
+        display: block;
+        margin: 10px 0;
+      }
+
+      .rotating-circle-container {
+        width: 150px;
+        height: 150px;
+      }
+
+      .rotating-circle-container div {
+        width: 60px;
+        height: 60px;
+        font-size: 0.8rem;
+      }
+
+      .service-item {
+        width: 90%;
+      }
+
+      .social-media a {
+        font-size: 1.5rem;
+      }
     }
   </style>
 </head>
@@ -275,4 +346,5 @@
     <p>© 2025 <a href="index.html">SOZO Cleaning Services</a>. All rights reserved.</p>
   </footer>
 </body>
-</html>
+  </html>
+  
