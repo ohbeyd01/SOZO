@@ -2,62 +2,243 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Services - SOZO Cleaning Services</title>
+  <!-- FontAwesome CDN for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <style>
     body {
-      font-family: Arial, sans-serif;
       margin: 0;
-      padding: 0;
-      background-color: #ffffff;
-      color: #000000;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #000;
+      color: #fff;
     }
+
+    /* Header Section */
     .header {
-      padding: 10px 20px;
-      background-color: #003366;
-      color: #ffffff;
-    }
-    .services {
+      text-align: center;
       padding: 20px;
+      background-color: #1a1a1a;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
     }
-    .services h2 {
-      color: #003366;
-    }
-    .services img {
-      width: 100%;
-      max-width: 400px;
-      margin: 20px 0;
-    }
-    ul {
-      margin: 20px 0;
-      padding-left: 20px;
-    }
-    ul li {
+
+    .logo-img {
+      max-width: 80px;
       margin-bottom: 10px;
+    }
+
+    .navbar {
+      margin-top: 10px;
+    }
+
+    .navbar a {
+      margin: 0 15px;
+      color: #00bcd4;
+      text-decoration: none;
+      font-size: 1.1rem;
+    }
+
+    .navbar a.active,
+    .navbar a:hover {
+      color: #007c9a;
+      text-decoration: underline;
+    }
+
+    /* Services Section */
+    .services-section {
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    .services-section h1 {
+      color: #00bcd4;
+      font-size: 2.5rem;
+      margin-bottom: 30px;
+    }
+
+    .service-details {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .service-item {
+      background-color: #1a1a1a;
+      border: 2px solid #00bcd4;
+      border-radius: 10px;
+      width: 300px;
+      padding: 20px;
+      text-align: left;
+      transition: transform 0.3s, background-color 0.3s;
+    }
+
+    .service-item:hover {
+      transform: translateY(-10px);
+      background-color: #333;
+    }
+
+    .service-item img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      margin-bottom: 15px;
+    }
+
+    .service-item h2 {
+      color: #00bcd4;
+      font-size: 1.8rem;
+      margin-bottom: 10px;
+    }
+
+    .service-item p {
+      color: #bbb;
+      font-size: 1rem;
+      margin-bottom: 15px;
+    }
+
+    .service-item a {
+      display: inline-block;
+      padding: 8px 16px;
+      background-color: #00bcd4;
+      color: #000;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    .service-item a:hover {
+      background-color: #007c9a;
+      color: #fff;
+    }
+
+    /* Footer Section */
+    .footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #1a1a1a;
+      color: #00bcd4;
+    }
+
+    .footer p {
+      margin: 0;
+      font-size: 0.9rem;
+    }
+
+    .footer a {
+      color: #00bcd4;
+      text-decoration: none;
+    }
+
+    .footer a:hover {
+      text-decoration: underline;
+    }
+
+    /* Social Media Icons */
+    .social-media {
+      margin: 20px 0;
+      text-align: center;
+    }
+
+    .social-media a {
+      margin: 0 15px;
+      color: #00bcd4;
+      font-size: 2rem;
+      text-decoration: none;
+    }
+
+    .social-media a:hover {
+      color: #007c9a;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .service-details {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .service-item {
+        width: 90%;
+      }
+
+      .navbar a {
+        display: block;
+        margin: 10px 0;
+      }
+
+      .social-media a {
+        font-size: 1.5rem;
+      }
     }
   </style>
 </head>
 <body>
+  <!-- Header Section -->
   <header class="header">
-    <h1>Our Services</h1>
+    <img src="logo.png" alt="SOZO Logo" class="logo-img">
+    <h1>SOZO Cleaning Services</h1>
+    <p>Dirty? Don’t Worry!</p>
+    <nav class="navbar">
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="services.html" class="active">Services</a>
+      <a href="contact.html">Contact</a>
+    </nav>
   </header>
-  <section class="services">
-    <h2>House Cleaning</h2>
-    <p>
-      Ever woke up and wished things were in place? Or maybe, you had an extra minute to leave your home in a perfect condition? Probably Yes. So, why don’t you try our remarkable domestic cleaning services? We, at SOZO Cleaning Services, step in to make it happen! This can be done at a convenient price that will leave you calling us again.
-    </p>
-    <img src="men-at-work.jpg" alt="Picture of men at work">
-    <h2>Carpet Cleaning Services</h2>
-    <ul>
-      <li>Carpet Assessment: Material/Fabric, stains, dust, and scent assessment.</li>
-      <li>Choice of Vacuum Cleaner: Assessed based on the previous washes.</li>
-      <li>Start vacuuming, overlapping the previous pass slightly.</li>
-      <li>Pay attention to the edges and corners of the carpet.</li>
-    </ul>
-    <h2>SOZO Sofa Set Cleaning</h2>
-    <p>
-      When was the last time you had your sofas cleaned? Sofa sets are part of the most forgotten grey areas in a well-lit room. We recommend a proper SOZO sofa clean-up regularly for a healthy home that keeps away pests, dust, and even respiratory infections.
-    </p>
+
+  <!-- Services Section -->
+  <section class="services-section">
+    <h1>Our Services</h1>
+    <div class="service-details">
+      <!-- House Cleaning -->
+      <div class="service-item" id="house-cleaning">
+        <img src="house-cleaning.jpg" alt="House Cleaning">
+        <h2>House Cleaning</h2>
+        <p>Professional cleaning services for your home. We take care of all the details!</p>
+        <a href="services.html#house-cleaning">Learn More</a>
+      </div>
+
+      <!-- Carpet Cleaning -->
+      <div class="service-item" id="carpet-cleaning">
+        <img src="carpet-cleaning.jpg" alt="Carpet Cleaning">
+        <h2>Carpet Cleaning</h2>
+        <p>Effective carpet cleaning to remove dirt and stains, leaving your carpets fresh!</p>
+        <a href="services.html#carpet-cleaning">Learn More</a>
+      </div>
+
+      <!-- Sofa Cleaning -->
+      <div class="service-item" id="sofa-cleaning">
+        <img src="sofa-cleaning.jpg" alt="Sofa Cleaning">
+        <h2>Sofa Cleaning</h2>
+        <p>We restore your sofas to their original beauty with professional cleaning.</p>
+        <a href="services.html#sofa-cleaning">Learn More</a>
+      </div>
+
+      <!-- Upholstery Cleaning -->
+      <div class="service-item" id="upholstery-cleaning">
+        <img src="upholstery-cleaning.jpg" alt="Upholstery Cleaning">
+        <h2>Upholstery Cleaning</h2>
+        <p>Thorough upholstery cleaning to keep your furniture looking great.</p>
+        <a href="services.html#upholstery-cleaning">Learn More</a>
+      </div>
+    </div>
   </section>
+
+  <!-- Social Media Icons -->
+  <div class="social-media">
+    <a href="https://wa.me/1234567890" target="_blank"><i class="fab fa-whatsapp"></i></a>
+    <a href="https://www.instagram.com/sozo_cleaning/" target="_blank"><i class="fab fa-instagram"></i></a>
+    <a href="https://www.facebook.com/sozo_cleaning" target="_blank"><i class="fab fa-facebook"></i></a>
+  </div>
+
+  <!-- Footer Section -->
+  <footer class="footer">
+    <p>© 2025 <a href="index.html">SOZO Cleaning Services</a>. All rights reserved.</p>
+  </footer>
 </body>
-</html>
+  </html>
+  
