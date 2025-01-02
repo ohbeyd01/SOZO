@@ -6,66 +6,174 @@
   <title>SOZO Cleaning Services</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
       margin: 0;
-      padding: 0;
-      background-color: #ffffff;
-      color: #000000;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #000;
+      color: #fff;
     }
+
+    /* Header Section */
     .header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 10px 20px;
-      background-color: #003366;
-      color: #ffffff;
-    }
-    .logo img {
-      width: 80px;
-    }
-    .intro {
       text-align: center;
-      padding: 50px 20px;
-      background: linear-gradient(to right, #0066cc, #00ccff);
-      color: #ffffff;
+      padding: 20px;
+      background-color: #1a1a1a;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
     }
-    .services-overview {
-      text-align: center;
-      padding: 30px 20px;
+
+    .logo-img {
+      max-width: 80px;
+      margin-bottom: 10px;
     }
-    .services-overview h2 {
-      color: #003366;
+
+    .navbar {
+      margin-top: 10px;
     }
-    .services-overview a {
+
+    .navbar a {
+      margin: 0 15px;
+      color: #00bcd4;
       text-decoration: none;
+      font-size: 1.1rem;
+    }
+
+    .navbar a.active,
+    .navbar a:hover {
+      color: #007c9a;
+      text-decoration: underline;
+    }
+
+    /* Main Section */
+    .main-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 40px;
+      flex-wrap: wrap;
+    }
+
+    .rotating-ring {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      border: 5px solid transparent;
+      border-top: 5px solid #00bcd4;
+      border-left: 5px solid #00bcd4;
+      animation: rotate 5s linear infinite;
+      position: relative;
+      margin: 20px auto;
+    }
+
+    .rotating-ring span {
+      position: absolute;
+      width: 100%;
+      text-align: center;
+      color: #00bcd4;
+      font-size: 14px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-weight: bold;
+    }
+
+    @keyframes rotate {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
+    .hero {
+      flex: 1;
+      text-align: left;
+      padding: 50px;
+    }
+
+    .hero h1 {
+      color: #00bcd4;
+      font-size: 3rem;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      line-height: 1.6;
+      margin-bottom: 15px;
+    }
+
+    .cta {
+      display: inline-block;
       padding: 10px 20px;
-      background-color: #003366;
-      color: #ffffff;
+      background-color: #00bcd4;
+      color: #000;
+      text-decoration: none;
       border-radius: 5px;
+      font-weight: bold;
+    }
+
+    .cta:hover {
+      background-color: #007c9a;
+      color: #fff;
+    }
+
+    /* Footer Section */
+    .footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #1a1a1a;
+      color: #00bcd4;
+      margin-top: 40px;
+    }
+
+    .footer p {
+      margin: 0;
+      font-size: 0.9rem;
+    }
+
+    .footer a {
+      color: #00bcd4;
+      text-decoration: none;
+    }
+
+    .footer a:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
 <body>
+  <!-- Header Section -->
   <header class="header">
-    <div class="logo">
-      <img src="logo.png" alt="SOZO Cleaning Services Logo">
-    </div>
+    <img src="logo.png" alt="SOZO Logo" class="logo-img">
     <h1>SOZO Cleaning Services</h1>
-  </header>
-  <section class="intro">
-    <h1>SOZO CLEANING SERVICES</h1>
     <p>Dirty? Don’t Worry!</p>
-    <p>From the inside out. From Residential cleaning to office buildings, post-construction cleaning, cabro cleaning, lawn mowing, fence trimming, and car washing; only a call away! We offer economical and affordable prices without compromising quality. You can try us today!</p>
-  </section>
-  <section class="services-overview">
-    <h2>Our Services</h2>
-    <p>
-      - House Cleaning<br>
-      - Carpet Cleaning Services<br>
-      - Sofa Set Cleaning<br>
-      - Post Construction Cleaning<br>
-    </p>
-    <a href="services.html">Explore More</a>
-  </section>
+    <nav class="navbar">
+      <a href="index.html" class="active">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="services.html">Services</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Main Section -->
+  <div class="main-container">
+    <div class="rotating-ring">
+      <span>House Cleaning</span>
+    </div>
+    <section class="hero">
+      <h1>Welcome to SOZO Cleaning Services</h1>
+      <p>From the inside out, we make cleanliness our priority. Offering house cleaning, carpet cleaning, sofa set cleaning, and much more!</p>
+      <p>Experience professionalism, affordability, and unbeatable quality in every service we deliver.</p>
+      <a href="services.html" class="cta">Explore Our Services</a>
+    </section>
+  </div>
+
+  <!-- Footer Section -->
+  <footer class="footer">
+    <p>© 2025 <a href="index.html">SOZO Cleaning Services</a>. All rights reserved.</p>
+  </footer>
 </body>
-</html>
+  </html>
+  
