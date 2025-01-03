@@ -67,52 +67,100 @@
     }
 
     .contact-info {
-      margin-bottom: 40px;
+      margin-bottom: 30px;
     }
 
     .contact-info p {
       font-size: 1.2rem;
+      line-height: 1.6;
       margin: 10px 0;
     }
 
-    .contact-info i {
-      margin-right: 10px;
-      color: #00bcd4;
-    }
-
-    /* Map Section */
-    .map {
-      margin: 20px auto;
-      max-width: 800px;
-      border: 3px solid #00bcd4;
+    .contact-form {
+      max-width: 600px;
+      margin: 0 auto;
+      background-color: #1a1a1a;
+      padding: 30px;
       border-radius: 10px;
-      overflow: hidden;
+      box-shadow: 0 0 10px rgba(0, 188, 212, 0.5);
     }
 
-    .social-media-section {
-      margin: 40px 0;
+    .contact-form label {
+      display: block;
+      text-align: left;
+      margin-bottom: 5px;
+      color: #00bcd4;
+      font-weight: bold;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #00bcd4;
+      border-radius: 5px;
+      background-color: #333;
+      color: #fff;
+      font-size: 1rem;
+    }
+
+    .contact-form input::placeholder,
+    .contact-form textarea::placeholder {
+      color: #bbb;
+    }
+
+    .contact-form button {
+      padding: 12px 25px;
+      background-color: #00bcd4;
+      color: #000;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 1rem;
+      font-weight: bold;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    .contact-form button:hover {
+      background-color: #007c9a;
+      color: #fff;
+    }
+
+    /* Map Embed Section */
+    .map-container {
+      margin: 40px auto;
       text-align: center;
     }
 
-    .social-media-section h2 {
-      color: #00bcd4;
-      margin-bottom: 20px;
+    .map-container iframe {
+      width: 100%;
+      max-width: 600px;
+      height: 300px;
+      border: 0;
+      border-radius: 10px;
     }
 
-    .social-media-icons a {
+    /* Social Media Section */
+    .follow-us {
+      margin: 30px 0;
+      text-align: center;
+    }
+
+    .social-media {
+      margin: 20px 0;
+      text-align: center;
+    }
+
+    .social-media a {
       margin: 0 15px;
-      color: #fff;
-      background-color: #00bcd4;
+      color: #00bcd4;
       font-size: 2rem;
       text-decoration: none;
-      padding: 10px;
-      border-radius: 50%;
-      transition: background-color 0.3s, transform 0.3s;
     }
 
-    .social-media-icons a:hover {
-      background-color: #007c9a;
-      transform: scale(1.1);
+    .social-media a:hover {
+      color: #007c9a;
     }
 
     /* Footer Section */
@@ -136,22 +184,6 @@
     .footer a:hover {
       text-decoration: underline;
     }
-
-    /* Responsive Design */
-    @media (max-width: 768px) {
-      .navbar a {
-        display: block;
-        margin: 10px 0;
-      }
-
-      .contact-form {
-        padding: 20px;
-      }
-
-      .social-media-icons a {
-        font-size: 1.5rem;
-      }
-    }
   </style>
 </head>
 <body>
@@ -172,11 +204,10 @@
   <section class="contact-section">
     <h1>Get in Touch</h1>
     <div class="contact-info">
-      <p><i class="fas fa-phone"></i> Phone: +254 712 345 678</p>
-      <p><i class="fas fa-envelope"></i> Email: contact@sozocleaning.com</p>
-      <p><i class="fas fa-map-marker-alt"></i> Address: 123 Clean Street, Nairobi, Kenya</p>
+      <p><strong>Phone:</strong> +1 234 567 890</p>
+      <p><strong>Email:</strong> contact@sozo.com</p>
+      <p><strong>Address:</strong> 123 Clean Street, Shine City, USA</p>
     </div>
-
     <form class="contact-form" action="#" method="POST">
       <label for="name">Your Name</label>
       <input type="text" id="name" name="name" placeholder="Enter your name" required>
@@ -191,22 +222,19 @@
     </form>
   </section>
 
-  <!-- Embedded Map -->
-  <div class="map">
-    <iframe
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31723.124017410678!2d36.81722394208984!3d-1.286389122643405!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x183840c9f3d5e21f%3A0xd6341a1c847a8d7e!2sNairobi%20CBD%2C%20Nairobi!5e0!3m2!1sen!2ske!4v1612345678901!5m2!1sen!2ske"
-      width="100%"
-      height="450"
-      style="border:0;"
-      allowfullscreen=""
+  <!-- Map Embed Section -->
+  <div class="map-container">
+    <iframe 
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.8354345094813!2d144.95605431531823!3d-37.81720997975121!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0xf5772b02c5d136c5!2sVictoria!5e0!3m2!1sen!2sau!4v1633330201200!5m2!1sen!2sau" 
+      allowfullscreen="" 
       loading="lazy">
     </iframe>
   </div>
 
   <!-- Social Media Section -->
-  <div class="social-media-section">
-    <h2>You Can Also Follow Us On</h2>
-    <div class="social-media-icons">
+  <div class="follow-us">
+    <p>You can also follow us on:</p>
+    <div class="social-media">
       <a href="https://wa.me/1234567890" target="_blank"><i class="fab fa-whatsapp"></i></a>
       <a href="https://www.instagram.com/sozo_cleaning/" target="_blank"><i class="fab fa-instagram"></i></a>
       <a href="https://www.facebook.com/sozo_cleaning" target="_blank"><i class="fab fa-facebook"></i></a>
@@ -219,4 +247,5 @@
     <p>© 2025 <a href="index.html">SOZO Cleaning Services</a>. All rights reserved.</p>
   </footer>
 </body>
-</html>
+                                                                                      </html>
+        
