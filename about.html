@@ -30,7 +30,10 @@
     }
 
     .navbar {
-      margin-top: 10px;
+      display: flex;
+      justify-content: center;
+      background-color: #333;
+      padding: 10px 0;
     }
 
     .navbar a {
@@ -38,12 +41,15 @@
       color: #00bcd4;
       text-decoration: none;
       font-size: 1.1rem;
+      font-weight: bold;
+      padding: 8px 15px;
+      border-radius: 5px;
     }
 
     .navbar a.active,
     .navbar a:hover {
-      color: #007c9a;
-      text-decoration: underline;
+      background-color: #007c9a;
+      color: #fff;
     }
 
     /* About Section */
@@ -56,6 +62,7 @@
       color: #00bcd4;
       font-size: 2.5rem;
       margin-bottom: 20px;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
     }
 
     .about-section p {
@@ -73,6 +80,20 @@
       height: auto;
       border-radius: 10px;
       margin-bottom: 20px;
+      box-shadow: 0 4px 8px rgba(0, 188, 212, 0.5);
+    }
+
+    .about-list {
+      text-align: left;
+      max-width: 800px;
+      margin: 20px auto;
+      font-size: 1rem;
+    }
+
+    .about-list li {
+      margin: 10px 0;
+      color: #bbb;
+      line-height: 1.6;
     }
 
     /* Footer Section */
@@ -116,8 +137,12 @@
 
     /* Responsive Design */
     @media (max-width: 768px) {
+      .navbar {
+        flex-direction: column;
+        align-items: center;
+      }
+
       .navbar a {
-        display: block;
         margin: 10px 0;
       }
 
@@ -150,13 +175,20 @@
     <h1>About SOZO Cleaning Services</h1>
     <img src="about-us.jpg" alt="Our Team at Work">
     <p>
-      At SOZO Cleaning Services, we are dedicated to providing top-notch cleaning solutions for both residential and commercial spaces. With years of experience in the industry, our team of professional, vetted cleaners ensures that every job is done to the highest standards of quality and efficiency.
+      Welcome to SOZO Cleaning Services, where cleanliness meets professionalism. We provide a wide range of top-notch cleaning solutions tailored to meet your specific needs.
     </p>
     <p>
-      Our mission is to make your environment spotless and healthy, allowing you to focus on what truly matters. We believe in building lasting relationships with our clients through exceptional service, reliability, and attention to detail.
+      Since our establishment, we have been committed to delivering exceptional cleaning services for homes and businesses. Our team of highly trained professionals utilizes eco-friendly products and advanced techniques to ensure your space is spotless and healthy.
     </p>
+    <ul class="about-list">
+      <li>📌 <strong>Experience:</strong> Over 10 years of expertise in residential and commercial cleaning.</li>
+      <li>📌 <strong>Eco-Friendly:</strong> We prioritize the use of safe and environmentally friendly cleaning solutions.</li>
+      <li>📌 <strong>Customer-Centric:</strong> Our services are designed to fit your schedule and exceed your expectations.</li>
+      <li>📌 <strong>Reliable Staff:</strong> Our cleaners are background-checked, insured, and trained for professionalism.</li>
+      <li>📌 <strong>Affordable Pricing:</strong> We provide premium services at competitive rates.</li>
+    </ul>
     <p>
-      Whether you need a one-time deep clean or regular maintenance, SOZO Cleaning Services is your trusted partner for all your cleaning needs. Experience the difference with our professional and affordable cleaning solutions.
+      At SOZO Cleaning Services, your satisfaction is our priority. Partner with us and experience the transformation!
     </p>
   </section>
 
@@ -172,5 +204,5 @@
     <p>© 2025 <a href="index.html">SOZO Cleaning Services</a>. All rights reserved.</p>
   </footer>
 </body>
-    </html>
-  
+  </html>
+              
