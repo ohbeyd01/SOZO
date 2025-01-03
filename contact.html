@@ -30,21 +30,30 @@
     }
 
     .navbar {
-      margin-top: 10px;
-    }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 0;
+  list-style: none;
+  background-color: #1a1a1a;
+}
 
-    .navbar a {
-      margin: 0 15px;
-      color: #00bcd4;
-      text-decoration: none;
-      font-size: 1.1rem;
-    }
+.navbar a {
+  margin: 0 15px;
+  color: #00bcd4;
+  text-decoration: none;
+  font-size: 1.1rem;
+  padding: 5px 10px;
+  transition: color 0.3s, background-color 0.3s;
+}
 
-    .navbar a.active,
-    .navbar a:hover {
-      color: #007c9a;
-      text-decoration: underline;
-    }
+.navbar a:hover,
+.navbar a.active {
+  color: #fff;
+  background-color: #007c9a;
+  border-radius: 5px;
+}
+
 
     /* Contact Section */
     .contact-section {
