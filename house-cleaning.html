@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>House Cleaning - SOZO Cleaning Services</title>
+  <style>
+    /* General Styles */
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #000;
+      color: #fff;
+      line-height: 1.6;
+    }
+
+    /* Header Section */
+    .header {
+      text-align: center;
+      padding: 20px;
+      background-color: #1a1a1a;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .header h1 {
+      color: #00bcd4;
+    }
+
+    /* Content Section */
+    .content {
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: #1a1a1a;
+      border-radius: 10px;
+    }
+
+    .content h2 {
+      color: #00bcd4;
+    }
+
+    .content p {
+      color: #bbb;
+    }
+
+    /* Procedure Section */
+    .steps {
+      margin: 20px 0;
+    }
+
+    .step {
+      margin-bottom: 15px;
+      padding: 10px;
+      background-color: #333;
+      border-radius: 5px;
+      color: #00bcd4;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .step i {
+      font-size: 1.5rem;
+      color: #00bcd4;
+    }
+
+    /* Back Button */
+    .back-link {
+      display: block;
+      margin: 20px auto;
+      width: max-content;
+      padding: 10px 20px;
+      background-color: #00bcd4;
+      color: #000;
+      text-decoration: none;
+      border-radius: 5px;
+      text-align: center;
+    }
+
+    .back-link:hover {
+      background-color: #007c9a;
+      color: #fff;
+    }
+
+    /* Animation for content fade-in */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeIn 1s ease-out forwards;
+    }
+
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header Section -->
+  <header class="header">
+    <h1>House Cleaning Service</h1>
+  </header>
+
+  <!-- Main Content -->
+  <main class="content fade-in">
+    <h2>About Our Service</h2>
+    <p>Professional house cleaning services ensuring every corner of your home is spotless. Our expert team guarantees satisfaction with attention to detail and eco-friendly products.</p>
+    
+    <h2>Procedure</h2>
+    <div class="steps">
+      <div class="step">
+        <i class="fas fa-calendar-check"></i>
+        <span>Step 1: Book online through our portal.</span>
+      </div>
+      <div class="step">
+        <i class="fas fa-clock"></i>
+        <span>Step 2: Schedule a convenient time for our visit.</span>
+      </div>
+      <div class="step">
+        <i class="fas fa-home"></i>
+        <span>Step 3: Sit back while we clean and refresh your home.</span>
+      </div>
+    </div>
+    <a href="services.html" class="back-link">Back to Services</a>
+  </main>
+
+  <!-- FontAwesome Icons -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
+
+  <!-- JavaScript -->
+  <script>
+    // Add a delay to the fade-in effect
+    document.addEventListener("DOMContentLoaded", () => {
+      const content = document.querySelector('.content');
+      content.classList.add('fade-in');
+    });
+  </script>
+</body>
+  </html>
+  
