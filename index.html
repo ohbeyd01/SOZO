@@ -2,358 +2,130 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SOZO Cleaning Services</title>
-  <!-- FontAwesome CDN for icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <style>
+    /* General Styles */
     body {
       margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #000;
-      color: #fff;
+      font-family: 'Arial', sans-serif;
+      color: #333;
     }
 
     /* Header Section */
-    .header {
-      text-align: center;
-      padding: 20px;
-      background-color: #1a1a1a;
+    header {
+      background: #fff;
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
       position: sticky;
       top: 0;
       z-index: 1000;
     }
 
-    .logo-img {
-      max-width: 80px;
-      margin-bottom: 10px;
-    }
-
-.navbar {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 10px 0;
-  list-style: none;
-  background-color: #1a1a1a;
-}
-
-.navbar a {
-  margin: 0 15px;
-  color: #00bcd4;
-  text-decoration: none;
-  font-size: 1.1rem;
-  padding: 5px 10px;
-  transition: color 0.3s, background-color 0.3s;
-}
-
-.navbar a:hover,
-.navbar a.active {
-  color: #fff;
-  background-color: #007c9a;
-  border-radius: 5px;
-}
-
-
-    /* Rotating Circle Section */
-    .rotating-circle-container {
-      position: relative;
-      width: 250px;
-      height: 250px;
-      margin: 30px auto;
-      animation: rotate 20s linear infinite;
-      background-image: url('working.jpeg'); /* Add the image behind the circles */
-      background-size: cover;
-      background-position: center;
-      border-radius: 50%;
-      box-shadow: 0 0 20px rgba(0, 188, 212, 0.5);
-    }
-
-    .rotating-circle-container div {
-      position: absolute;
-      width: 90px;
-      height: 90px;
-      background-color: rgba(0, 188, 212, 0.9);
-      border-radius: 50%;
+    header .logo {
       display: flex;
       align-items: center;
-      justify-content: center;
-      color: #000;
+    }
+
+    header .logo img {
+      max-height: 50px;
+      margin-right: 10px;
+    }
+
+    header nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #333;
       font-size: 1rem;
-      font-weight: bold;
-      text-align: center;
-      cursor: pointer;
-      transition: transform 0.3s, background-color 0.3s;
     }
 
-    .rotating-circle-container div:hover {
-      background-color: rgba(0, 124, 154, 0.9);
-      color: #fff;
-      transform: scale(1.1);
+    header nav a:hover {
+      color: #00bcd4;
     }
 
-    /* Positioning Service Buttons */
-    .service1 { top: 10%; left: 50%; transform: translate(-50%, -50%); }
-    .service2 { top: 50%; left: 90%; transform: translate(-50%, -50%); }
-    .service3 { top: 90%; left: 50%; transform: translate(-50%, -50%); }
-    .service4 { top: 50%; left: 10%; transform: translate(-50%, -50%); }
-
-    @keyframes rotate {
-      0% { transform: rotate(0deg); }
-      100% { transform: rotate(360deg); }
+    .contact-number {
+      color: #00bcd4;
+      font-size: 0.9rem;
     }
 
     /* Hero Section */
     .hero {
+      position: relative;
       text-align: center;
-      padding: 40px 20px;
-      background-image: url('hero-background.jpg'); /* Optional: Add a hero background image */
-      background-size: cover;
-      background-position: center;
-      background-color: rgba(0, 0, 0, 0.7);
-      background-blend-mode: overlay;
+      background: url('your-image-path.jpg') no-repeat center center/cover;
+      height: 100vh;
+      color: #fff;
+    }
+
+    .hero-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 1;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      top: 50%;
+      transform: translateY(-50%);
     }
 
     .hero h1 {
-      color: #00bcd4;
-      font-size: 3rem;
-      margin-bottom: 20px;
-      text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+      font-size: 2.5rem;
+      margin: 0 0 20px;
     }
 
     .hero p {
       font-size: 1.2rem;
-      line-height: 1.6;
-      margin-bottom: 20px;
-      max-width: 800px;
-      margin-left: auto;
-      margin-right: auto;
+      margin: 0 0 30px;
     }
 
-    .cta {
+    .hero a {
       display: inline-block;
-      padding: 12px 25px;
-      background-color: #00bcd4;
-      color: #000;
+      padding: 10px 20px;
+      background: #00bcd4;
+      color: #fff;
       text-decoration: none;
       border-radius: 5px;
       font-weight: bold;
-      transition: background-color 0.3s, color 0.3s;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.3);
     }
 
-    .cta:hover {
-      background-color: #007c9a;
-      color: #fff;
-      box-shadow: 0 6px 8px rgba(0,0,0,0.5);
-    }
-
-    /* Services Description Section */
-    .services-description {
-      text-align: center;
-      padding: 40px 20px;
-      background-color: #333;
-    }
-
-    .services-description h2 {
-      font-size: 2rem;
-      color: #00bcd4;
-      margin-bottom: 30px;
-    }
-
-    .service-item {
-      display: inline-block;
-      width: 22%;
-      margin: 10px;
-      text-align: center;
-      background-color: #444;
-      padding: 20px;
-      border-radius: 10px;
-      transition: transform 0.3s, background-color 0.3s;
-    }
-
-    .service-item:hover {
-      transform: translateY(-10px);
-      background-color: #555;
-    }
-
-    .service-item img {
-      width: 100%;
-      height: auto;
-      border-radius: 10px;
-      margin-bottom: 15px;
-    }
-
-    .service-item h3 {
-      color: #fff;
-      font-size: 1.5rem;
-      margin: 10px 0;
-    }
-
-    .service-item p {
-      color: #bbb;
-      font-size: 1rem;
-      margin-bottom: 15px;
-    }
-
-    .service-item .cta {
-      padding: 8px 16px;
-      background-color: #00bcd4;
-      color: #000;
-      text-decoration: none;
-      border-radius: 5px;
-      font-weight: bold;
-      transition: background-color 0.3s, color 0.3s;
-    }
-
-    .service-item .cta:hover {
-      background-color: #007c9a;
-      color: #fff;
-    }
-
-    /* Footer Section */
-    .footer {
-      text-align: center;
-      padding: 20px;
-      background-color: #1a1a1a;
-      color: #00bcd4;
-    }
-
-    .footer p {
-      margin: 0;
-      font-size: 0.9rem;
-    }
-
-    .footer a {
-      color: #00bcd4;
-      text-decoration: none;
-    }
-
-    .footer a:hover {
-      text-decoration: underline;
-    }
-
-    /* Social Media Icons */
-    .social-media {
-      margin: 20px 0;
-      text-align: center;
-    }
-
-    .social-media a {
-      margin: 0 15px;
-      color: #00bcd4;
-      font-size: 2rem;
-      text-decoration: none;
-    }
-
-    .social-media a:hover {
-      color: #007c9a;
-    }
-
-    /* Responsive Design */
-    @media (max-width: 1200px) {
-      .service-item {
-        width: 45%;
-      }
-    }
-
-    @media (max-width: 768px) {
-      .navbar a {
-        display: block;
-        margin: 10px 0;
-      }
-
-      .rotating-circle-container {
-        width: 150px;
-        height: 150px;
-      }
-
-      .rotating-circle-container div {
-        width: 60px;
-        height: 60px;
-        font-size: 0.8rem;
-      }
-
-      .service-item {
-        width: 90%;
-      }
-
-      .social-media a {
-        font-size: 1.5rem;
-      }
+    .hero a:hover {
+      background: #007c9a;
     }
   </style>
 </head>
 <body>
-  <!-- Header Section -->
-  <header class="header">
-    <img src="logo.png" alt="SOZO Logo" class="logo-img">
-    <h1>SOZO Cleaning Services</h1>
-    <p>Dirty? Don’t Worry!</p>
-    <nav class="navbar">
-      <a href="index.html" class="active">Home</a>
-      <a href="about.html">About Us</a>
-      <a href="services.html">Services</a>
+  <!-- Header -->
+  <header>
+    <div class="logo">
+      <img src="your-logo-path.png" alt="SOZO Logo">
+      <span>SOZO</span>
+    </div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Service</a>
       <a href="contact.html">Contact</a>
+      <span class="contact-number">Call for help +254111844321</span>
     </nav>
   </header>
 
-  <!-- Rotating Circle Section -->
-  <div class="rotating-circle-container">
-    <div class="service1" onclick="location.href='services.html#house-cleaning'">House Cleaning</div>
-    <div class="service2" onclick="location.href='services.html#carpet-cleaning'">Carpet Cleaning</div>
-    <div class="service3" onclick="location.href='services.html#sofa-cleaning'">Sofa Cleaning</div>
-    <div class="service4" onclick="location.href='services.html#upholstery-cleaning'">Upholstery Cleaning</div>
-  </div>
-
-  <!-- Welcome Section -->
+  <!-- Hero Section -->
   <section class="hero">
-    <h1>Welcome to SOZO Cleaning Services</h1>
-    <p>From the inside out, we make cleanliness our priority. Offering house cleaning, carpet cleaning, sofa set cleaning, and much more!</p>
-    <p>Experience professionalism, affordability, and unbeatable quality in every service we deliver.</p>
-    <a href="services.html" class="cta">Explore Our Services</a>
-  </section>
-
-  <!-- Services Description Section -->
-  <section class="services-description">
-    <h2>Our Services</h2>
-    <div class="service-item">
-      <img src="house2.jpeg" alt="House Cleaning">
-      <h3>House Cleaning</h3>
-      <p>Professional cleaning services for your home. We take care of all the details!</p>
-      <a href="services.html#house-cleaning" class="cta">Learn More</a>
-    </div>
-    <div class="service-item">
-      <img src="carpet2.jpeg" alt="Carpet Cleaning">
-      <h3>Carpet Cleaning</h3>
-      <p>Effective carpet cleaning to remove dirt and stains, leaving your carpets fresh!</p>
-      <a href="services.html#carpet-cleaning" class="cta">Learn More</a>
-    </div>
-    <div class="service-item">
-      <img src="sofa2.jpeg" alt="Sofa Cleaning">
-      <h3>Sofa Cleaning</h3>
-      <p>We restore your sofas to their original beauty with professional cleaning.</p>
-      <a href="services.html#sofa-cleaning" class="cta">Learn More</a>
-    </div>
-    <div class="service-item">
-      <img src="upholstery.jpeg" alt="Upholstery Cleaning">
-      <h3>Upholstery Cleaning</h3>
-      <p>Thorough upholstery cleaning to keep your furniture looking great.</p>
-      <a href="services.html#upholstery-cleaning" class="cta">Learn More</a>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1>Best Cleaning Service in Kenya</h1>
+      <p>Experience professionalism, affordability, and unbeatable quality in every service we deliver.</p>
+      <a href="contact.html">Contact Us</a>
     </div>
   </section>
-
-  <!-- Social Media Icons -->
-  <div class="social-media">
-    <a href="https://wa.me/1234567890" target="_blank"><i class="fab fa-whatsapp"></i></a>
-    <a href="https://www.instagram.com/sozocleaningservices/" target="_blank"><i class="fab fa-instagram"></i></a>
-    <a href="https://www.facebook.com/share/19hUfJPvFu/" target="_blank"><i class="fab fa-facebook"></i></a>
-  </div>
-
-  <!-- Footer Section -->
-  <footer class="footer">
-    <p>© 2025 <a href="index.html">SOZO Cleaning Services</a>. All rights reserved.</p>
-  </footer>
 </body>
-  </html>
-  
+</html>
