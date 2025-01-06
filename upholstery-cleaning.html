@@ -5,7 +5,174 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Upholstery Cleaning - SOZO Cleaning Services</title>
   <style>
-    /* Styles are the same as Sofa Cleaning */
+    /* General Styles */
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #000;
+      color: #fff;
+      line-height: 1.6;
+    }
+
+    /* Header Section */
+    .header {
+      text-align: center;
+      padding: 20px;
+      background-color: #1a1a1a;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .header h1 {
+      color: #00bcd4;
+    }
+
+    /* Content Section */
+    .content {
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: #1a1a1a;
+      border-radius: 10px;
+    }
+
+    .content h2 {
+      color: #00bcd4;
+    }
+
+    .content p {
+      color: #bbb;
+    }
+
+    /* Procedure Section */
+    .steps {
+      margin: 20px 0;
+    }
+
+    .step {
+      margin-bottom: 15px;
+      padding: 10px;
+      background-color: #333;
+      border-radius: 5px;
+      color: #00bcd4;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .step i {
+      font-size: 1.5rem;
+      color: #00bcd4;
+    }
+
+    /* Contact Section */
+    .contact-section {
+      margin: 30px 0;
+      text-align: center;
+    }
+
+    .contact-section p {
+      margin: 5px 0;
+      color: #bbb;
+    }
+
+    /* Social Media Links */
+    .social-media {
+      margin: 20px 0;
+      text-align: center;
+    }
+
+    .social-media a {
+      margin: 0 15px;
+      color: #00bcd4;
+      font-size: 2rem;
+      text-decoration: none;
+    }
+
+    .social-media a:hover {
+      color: #007c9a;
+    }
+
+    /* Form Section */
+    .form-section {
+      margin-top: 30px;
+      padding: 20px;
+      background-color: #333;
+      border-radius: 10px;
+    }
+
+    .form-section label {
+      display: block;
+      margin-bottom: 5px;
+      color: #00bcd4;
+      font-weight: bold;
+    }
+
+    .form-section input,
+    .form-section textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #00bcd4;
+      border-radius: 5px;
+      background-color: #444;
+      color: #fff;
+    }
+
+    .form-section input::placeholder,
+    .form-section textarea::placeholder {
+      color: #bbb;
+    }
+
+    .form-section button {
+      width: 100%;
+      padding: 12px;
+      background-color: #00bcd4;
+      color: #000;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    .form-section button:hover {
+      background-color: #007c9a;
+      color: #fff;
+    }
+
+    /* Back Button */
+    .back-link {
+      display: block;
+      margin: 20px auto;
+      width: max-content;
+      padding: 10px 20px;
+      background-color: #00bcd4;
+      color: #000;
+      text-decoration: none;
+      border-radius: 5px;
+      text-align: center;
+    }
+
+    .back-link:hover {
+      background-color: #007c9a;
+      color: #fff;
+    }
+
+    /* Animation for content fade-in */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeIn 1s ease-out forwards;
+    }
+
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
   </style>
 </head>
 <body>
