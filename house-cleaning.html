@@ -66,6 +66,82 @@
       color: #00bcd4;
     }
 
+    /* Contact Section */
+    .contact-section {
+      margin: 30px 0;
+      text-align: center;
+    }
+
+    .contact-section p {
+      margin: 5px 0;
+      color: #bbb;
+    }
+
+    /* Social Media Links */
+    .social-media {
+      margin: 20px 0;
+      text-align: center;
+    }
+
+    .social-media a {
+      margin: 0 15px;
+      color: #00bcd4;
+      font-size: 2rem;
+      text-decoration: none;
+    }
+
+    .social-media a:hover {
+      color: #007c9a;
+    }
+
+    /* Form Section */
+    .form-section {
+      margin-top: 30px;
+      padding: 20px;
+      background-color: #333;
+      border-radius: 10px;
+    }
+
+    .form-section label {
+      display: block;
+      margin-bottom: 5px;
+      color: #00bcd4;
+      font-weight: bold;
+    }
+
+    .form-section input,
+    .form-section textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #00bcd4;
+      border-radius: 5px;
+      background-color: #444;
+      color: #fff;
+    }
+
+    .form-section input::placeholder,
+    .form-section textarea::placeholder {
+      color: #bbb;
+    }
+
+    .form-section button {
+      width: 100%;
+      padding: 12px;
+      background-color: #00bcd4;
+      color: #000;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    .form-section button:hover {
+      background-color: #007c9a;
+      color: #fff;
+    }
+
     /* Back Button */
     .back-link {
       display: block;
@@ -125,6 +201,39 @@
         <span>Step 3: Sit back while we clean and refresh your home.</span>
       </div>
     </div>
+
+    <h2>Contact Us</h2>
+    <div class="contact-section">
+      <p><strong>Phone:</strong> +2541 234 567 890</p>
+      <p><strong>Email:</strong> contact@sozo.com</p>
+      <p><strong>Address:</strong> 123 Clean Street, Nairobi City, Kenya</p>
+    </div>
+
+    <h2>Follow Us</h2>
+    <div class="social-media">
+      <a href="https://wa.me/1234567890" target="_blank"><i class="fab fa-whatsapp"></i></a>
+      <a href="https://www.instagram.com/sozocleaningservices/" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.facebook.com/share/19hUfJPvFu/" target="_blank"><i class="fab fa-facebook"></i></a>
+      <a href="https://twitter.com/sozo_cleaning" target="_blank"><i class="fab fa-twitter"></i></a>
+      <a href="https://www.youtube.com/" target="_blank"><i class="fab fa-youtube"></i></a>
+    </div>
+
+    <h2>Send Us a Message</h2>
+    <div class="form-section">
+      <form action="#" method="POST">
+        <label for="name">Your Name</label>
+        <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+        <label for="email">Your Email</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+        <label for="message">Your Message</label>
+        <textarea id="message" name="message" rows="5" placeholder="Enter your message" required></textarea>
+
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+
     <a href="services.html" class="back-link">Back to Services</a>
   </main>
 
@@ -140,5 +249,5 @@
     });
   </script>
 </body>
-  </html>
+          </html>
   
