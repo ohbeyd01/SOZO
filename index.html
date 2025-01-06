@@ -35,6 +35,11 @@
       margin-right: 10px;
     }
 
+    header nav {
+      display: flex;
+      align-items: center;
+    }
+
     header nav a {
       margin: 0 15px;
       text-decoration: none;
@@ -51,13 +56,56 @@
       font-size: 0.9rem;
     }
 
+    /* Responsive Navbar */
+    @media (max-width: 768px) {
+      header nav {
+        display: none;
+      }
+
+      header .menu-icon {
+        display: block;
+        font-size: 1.5rem;
+        cursor: pointer;
+      }
+
+      .mobile-menu {
+        display: none;
+        flex-direction: column;
+        background: #fff;
+        position: absolute;
+        top: 70px;
+        right: 0;
+        width: 100%;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+
+      .mobile-menu a {
+        padding: 10px 20px;
+        text-decoration: none;
+        color: #333;
+        font-size: 1rem;
+        border-bottom: 1px solid #ddd;
+      }
+
+      .mobile-menu a:hover {
+        background: #00bcd4;
+        color: #fff;
+      }
+
+      .mobile-menu.show {
+        display: flex;
+      }
+    }
+
     /* Hero Section */
     .hero {
       position: relative;
-      text-align: center;
       background: url('your-image-path.jpg') no-repeat center center/cover;
       height: 100vh;
       color: #fff;
+      display: flex;
+      align-items: center;
+      padding: 0 30px;
     }
 
     .hero-overlay {
@@ -73,8 +121,8 @@
     .hero-content {
       position: relative;
       z-index: 2;
-      top: 50%;
-      transform: translateY(-50%);
+      max-width: 50%;
+      text-align: left;
     }
 
     .hero h1 {
@@ -116,6 +164,13 @@
       <a href="contact.html">Contact</a>
       <span class="contact-number">Call for help +254111844321</span>
     </nav>
+    <span class="menu-icon" onclick="toggleMenu()">☰</span>
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Service</a>
+      <a href="contact.html">Contact</a>
+    </div>
   </header>
 
   <!-- Hero Section -->
@@ -127,5 +182,12 @@
       <a href="contact.html">Contact Us</a>
     </div>
   </section>
+
+  <script>
+    function toggleMenu() {
+      const mobileMenu = document.getElementById('mobileMenu');
+      mobileMenu.classList.toggle('show');
+    }
+  </script>
 </body>
 </html>
